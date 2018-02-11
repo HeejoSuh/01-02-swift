@@ -4,7 +4,7 @@
 //  a truck, if you know their length
 //
 //  Created by Heejo Suh in Feb 2018
-//  Copyright ®œ 2018 MTHS. All rights reserved.
+//  Copyright ¬®√è 2018 MTHS. All rights reserved.
 //
 
 
@@ -12,8 +12,9 @@
 var truckCanCarry: Double = 1100
 var logWeigh: Double = 20
 var numberOfLogsCanCarry : Double
+var lengthOfLog : Double = 0
 
-while true {
+while (lengthOfLog==0.25 || lengthOfLog==0.5 || lengthOfLog==1) {
     //ask for lengthof logs
     print("Input the length of your logs (0.25 m, 0.5 m or 1m): ")
     //get input***********
