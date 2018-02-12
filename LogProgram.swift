@@ -4,7 +4,7 @@
 //  a truck, if you know their length
 //
 //  Created by Heejo Suh in Feb 2018
-//  Copyright ¨Ï 2018 MTHS. All rights reserved.
+//  Copyright @ 2018 MTHS. All rights reserved.
 //
 
 //define variables
