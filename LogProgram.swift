@@ -7,14 +7,13 @@
 //  Copyright ¨Ï 2018 MTHS. All rights reserved.
 //
 
-
 //define variables
 var truckCanCarry: Double = 1100
 var logWeigh: Double = 20
 var numberOfLogsCanCarry : Double
 var lengthOfLog : Double = 0
 
-while (lengthOfLog!=0.25 || lengthOfLog!=0.5 || lengthOfLog!=1) {
+while (true) {
     //ask for lengthof logs
     print("Input the length of your logs (0.25 m, 0.5 m or 1m): ")
     //get input***********
@@ -29,5 +28,4 @@ while (lengthOfLog!=0.25 || lengthOfLog!=0.5 || lengthOfLog!=1) {
 	} else {
 		print("ERROR:\nPut in a numeric value. TRY AGAIN. \n\n")
 	}
-}
 }
