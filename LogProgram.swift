@@ -1,62 +1,33 @@
 //
-
-//  LogProgram.swift
-
-//  Calculates the maximum number of logs that can go on
-
-//  a truck, if you know their length
-
+//  EnergyCalculator.swift
+//  This program calculates the energy that can be calculated from a given mass
 //
-
 //  Created by Heejo Suh in Feb 2018
-
 //  Copyright @ 2018 MTHS. All rights reserved.
-
 //
+import Foundation
+
+//no input yet, need '?' to close
+var input: String?
+var massInput: Double = 0.0
+var totalEnergy: Double = 0.0
+
+let speedOfLight: Double = 2.998 * pow(10, 8)
 
 
-
-//define variables
-
-var truckCanCarry: Double = 1100
-
-var logWeigh: Double = 20
-
-var numberOfLogsCanCarry : Double
-
-var lengthOfLog : Double = 0
-
-
-while (true){
-	//ask for lengthof logs
-
-	print("Input the length of your logs (0.25 m, 0.5 m or 1m): ")
-
-	//get input***********
-
-	let input = readLine(strippingNewline: true)
-
-
-
-	//check if input is a number (Can't do try)
-
-	if let lengthOfLog = Double(input!) {
-
-  	  //let lengthOfLog = Double(input!)
-
-   	 if lengthOfLog==0.25 || lengthOfLog==0.5 || lengthOfLog==1{
-	let numberOfLogsCanCarry = truckCanCarry / ( logWeigh * lengthOfLog )
-
-   		 //need to have the !
-	
-    		print("Maximum number of logs the truck can carry:  \(numberOfLogsCanCarry)")
-
-		} else{
-		print("Put in 0.25, 0.5, or 1!")
-		}
+//while appropriate response has not been collected
+//use while-true functions to break out of
+while true {
+	print("Input mass (kg) to be converted: ")
+	input = readLine(strippingNewline: true)
+    //check if input is a number
+	if let massInput = Double(input!){
+		//calculate  (E=mc^2)
+		totalEnergy = massInput*pow(speedOfLight, 2)
+		print("Maximum amount of energy the mass can be converted into:  \(totalEnergy)J.")
+		//need break to get out of while loop and not repeat question
+		break
 	} else {
-
-    	print("ERROR:\nPut in a numeric value. TRY AGAIN. \n\n")
-
+		print("ERROR:\nPut in a numeric value. TRY AGAIN. \n\n")
 	}
 }
